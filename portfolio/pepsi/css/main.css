@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/*--------------------비주얼//--------------------*/
+#visual.section_01{width: 100%;}
+#visual.section_01:before{position: absolute; content:''; top:0; left:0; width: 30%; height:100%; background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);}
+#visual.section_01 img{width: 100%;}
+#visual.section_01 .width_con{position: absolute; top: 10%; left: 50%; margin-left: -700px;}
+body.loading #visual.section_01 .width_con .title_con h2,
+body.loading #visual.section_01 .width_con .title_con h3,
+body.loading #visual.section_01 .width_con .title_con img{opacity: 0; transform: translateX(50px);}
+#visual.section_01 .width_con .title_con h2{color: #015dcc; font-size: 70px; transition: transform 0.7s ease-out 0.5s, opacity 0.7s linear; transition-delay: 0.3s;}
+#visual.section_01 .width_con .title_con h3{font-family: 'Roboto', sans-serif; margin-top: 60px; color: #eee; font-size: 24px; transition: transform 0.7s ease-out 0.5s, opacity 0.7s linear; transition-delay: 0.7s;}
+#visual.section_01 .width_con .title_con h3:before{position: absolute; content: ''; width: 50px; height: 3px; margin-top: -30px; background: #015dcc;}
+#visual.section_01 .width_con .title_con img{width: 35%; transition: transform 0.7s ease-out 0.5s, opacity 0.7s linear; transition-delay: 0.5s;}
+#visual.section_01 .width_con .title_con h2,
+#visual.section_01 .width_con .title_con h3{ text-shadow: 0 0 30px rgba(0,0,0,0.75);}
+
+/*--------------------상품//--------------------*/
+#brands.section_02{}
+#brands.section_02 .width_con{}
+#brands.section_02 .width_con .title_con{margin-bottom: 43px}
+#brands.section_02 .width_con .two_con{}
+#brands.section_02 .width_con .two_con img{position: relative; z-index: 1;}
+#brands.section_02 .width_con .text_box{display: inline-block; *display: inline; *zoom: 1; width: 75%; margin: 0px 0px 18px -46px; padding: 30px 0 30px 70px; box-sizing: border-box; border-radius: 20px; font-size: 30px; background: #000;}
+#brands.section_02 .width_con .info{font-size: 22px; margin-top: 15px;}
+#brands.section_02 .width_con .info .info_sub{display: block; font-size: 14px; margin-top: 30px;}
+#brands.section_02 .width_con .mini_box{display: inline-block; *display: inline; *zoom: 1; width: 66.66%; height: 220px; margin-top: 30px; padding: 10px 15px; box-sizing: border-box; border: 2px solid white; font-size: 14px;}
+#brands.section_02 .width_con .mini_box span {display:inline-block; margin-bottom: 7px;}
+#brands.section_02 .back{display:flex; text-align: justify; border-bottom: 2px solid rgb(255, 255, 255); justify-content: space-between;}
+#brands.section_02 .mini_fo{display:flex; text-align: justify; margin: 5px 0 0 0; justify-content: space-between;}
+#brands.section_02 .after{border-bottom: 1px solid rgb(255, 255, 255);}
+#brands.section_02 .width_con .two_con .can_right .text_box{background: #015dcc;}
+
+/*--------------------히스토리//--------------------*/
+#history.section_03{}
+#history.section_03 .fixed_bg_img{background: url(../img/bg_history.jpg) 50% no-repeat; background-size: cover;}
+#history.section_03 h2, #history.section_03 h3, #history.section_03 h4{color: #eee;}
+#history.section_03 .width_con{}
+#history.section_03 .title_con{}
+#history.section_03 .four_con{margin-top: 50px;}
+#history.section_03 .four_con:hover{cursor: pointer;}
+#history.section_03 .four_con img{width: 50%; margin:0 auto;}
+#history.section_03 .four_con .can{position: relative; text-align: center; transition: transform 0.3s ease-out 0.05s;}
+#history.section_03 .four_con span{display: block; text-align:center; font-size: 30px; margin-top: 30px;}
+#history.section_03 .four_con span.info{font-size: 14px; margin: 15px 0 0 0;}
+
+/*--------------------룩북//--------------------*/
+#lookbook.section_04{}
+#lookbook.section_04 .width_con{}
+#lookbook.section_04 .width_con .margin_guide{ display: none;}
+#lookbook.section_04 .width_con .title_con{position: absolute; top: 21%; left: 50%; transform: translatex(-50%); }
+#lookbook.section_04 .width_con .title_con span{font-size: 50px;}
+#lookbook.section_04 .lookbook_con{}
+#lookbook.section_04 .lookbook_con img{width: 100%; border-radius: 12px;}
+#lookbook.section_04 .lookbook_con .iu_center{position: relative;}
+#lookbook.section_04 .iu_center span{position: absolute; bottom: 0; left: 0; padding: 20px; font-family: 'Bebas Neue', cursive; font-size: 34px; font-weight: 600; letter-spacing: 3px;opacity: 0.7;}
+
+/*--------------------time//--------------------*/
+#time.section_05{background: url(../img/bg_time.jpg) 50% no-repeat; background-size: cover;}
+#time.section_05 .width_con{}
+#time.section_05 .width_con .title_con{position: relative; left:50%;}
+#time.section_05 .title_con h2,
+#time.section_05 .title_con h3,
+#time.section_05 .title_con h4{color: #eee;}
+
+/*--------------------패키지//--------------------*/
+#package.section_06{}
+#package.section_06 .title_con {margin-bottom: 45px;}
+#package.section_06 .three_con .box_con{position: relative; text-align: center; cursor: pointer;}
+#package.section_06 .three_con .box_con img{width: 80%;}
+#package.section_06 .three_con .box_con .hover_con{position: absolute; top: 45%; left: 50%; width: 100%; transform: translateX(-50%); font-size: 22px; color: #111; text-align: center; opacity: 0;}
+#package.section_06 .three_con .box_con:hover img{opacity: 0.3; transition: all 0.2s ease-in-out;}
+#package.section_06 .three_con .box_con:hover .hover_con{opacity: 1; transition: all 0.2s ease-in-out;}
+
+/*--------------------챌린지//--------------------*/
+#challenge.section_07{}
+#challenge.section_07 .fixed_bg_img{background: url(../img/bg_challenge.jpg) 50% no-repeat; background-size: cover;}
+#challenge.section_07 h2, #challenge.section_07 h3, #challenge.section_07 h4{color: #eee;}
+#challenge.section_07 .width_con .title_con{margin-bottom: 50px;}
+#challenge.section_07 .width_con .six_con li{}
+#challenge.section_07 .width_con .six_con li .imgs{position:relative; display: block; border-radius: 12px;}
+#challenge.section_07 .width_con .six_con li .imgs .active_con{position: relative; transition: all 0.15s ease-in-out; border-radius: inherit; z-index: 3;}
+#challenge.section_07 .width_con .six_con li .imgs .active_con img{width: 100%; border-radius: inherit; box-shadow: 0 12px 12px -6px rgba(0, 0, 0, 0.5); transition: inherit;}
+#challenge.section_07 .width_con .six_con li .imgs .active_con .tag{position: absolute; bottom: 10px; left: 10px; color: #eee; z-index: 2;}
+#challenge.section_07 .width_con .six_con li .imgs .active_con:before{position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(0deg, rgba(0,0,0,0.4962359943977591) 0%, rgba(0,0,0,0.08167016806722693) 24%, rgba(0,0,0,0) 100%); z-index: 1;}
+#challenge.section_07 .width_con .six_con li .imgs .btn{position: absolute; top: 50%; left: 50%; margin: -25px 0 0 -19px; transition: all 0.15s ease-in-out; font-size: 50px; color: #eee; text-shadow: 0 0 20px rgba(0,0,0,0.35); z-index: 3;}
+#challenge.section_07 .width_con .six_con li a:hover{color: #111;}
+#challenge.section_07 .width_con .six_con li .imgs .active_con:hover img{filter: brightness(1.15);}
+#challenge.section_07 .width_con .six_con li .imgs:active .active_con{transform: scale(0.97);}
+#challenge.section_07 .width_con .six_con li .imgs:hover .btn{color: #015dcc; text-shadow: 0 0 30px rgba(255,255,255,0.5);}
+
+/*--------------------뉴스//--------------------*/
+#news.section_08{}
+#news.section_08 .width_con{}
+#news.section_08 .width_con .title_con{display: inline-block; *display: inline; *zoom: 1;}
+#news.section_08 .width_con .news_zone {display: inline-block; *display: inline; *zoom: 1; width: 66.66%; max-width: 920px;  margin-left: 125px; border-radius: 12px; box-shadow: 0 12px 12px -6px rgba(0, 0, 0, 0.5); background: #fff;}
+#news.section_08 .width_con .news_zone .inside{padding: 40px;}
+#news.section_08 .width_con .news_zone .inside img{display: inline-block; *display: inline; *zoom: 1; width: calc(50% - 20px); border-radius: 6px; margin-right: 40px;}
+#news.section_08 .width_con .news_zone .inside .info{display: inline-block; *display: inline; *zoom: 1; width: calc(50% - 20px); top: 0; right: 0; color: #111; line-height: 1.2em; vertical-align: top;}
+#news.section_08 .width_con .news_zone .inside .info h3{margin: 0 0 20px 0;}
+#news.section_08 .width_con .news_zone .inside .info p {font-size: 14px;}
+#news.section_08 .width_con .news_zone .inside .info .bar:before {position: absolute; content: ''; width: 40px; height: 3px; margin-top: -13px; background: #015dcc;}

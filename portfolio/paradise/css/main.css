@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+/*-----------------------------------비주얼//-----------------------------------*/
+#visual.section_01{
+    background: url(../img/bg_main.jpg) 50% no-repeat; /*백그라운드 크기를 50%만큼 적용한다*/
+    background-attachment: fixed; /*이미지 고정*/
+    background-size: cover; /*섹션 다 덮도록*/
+    height: 100vh; /*부모 값의 상관없이 값 설정*/
+    min-height: 920px; max-height: 1080px;
+    z-index: 1000;}
+
+ /*그라데이션 넣기*/
+#visual.section_01:before{position: absolute; content:''; top:0; left:0; width: 66%; height:100%; background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);}
+
+/*설정한 레이아웃 안에 하위객체 넣기*/
+#visual.section_01 .width_con{height: 100%; padding: 0;} 
+
+/*텍스트 위치지정*/
+#visual.section_01 .text_con {position: absolute; top: 50%; height: 340px; margin-top: -170px;} 
+
+/*폰트120px, 글자간격0.85em, 전체 텍스트가 나타날때 1초의 딜레이를 주며 0.5초동안 페이드인*/
+#visual.section_01 .text_con h1{font-size: 120px; line-height: 0.85em; opacity: 1; transition: all 1s linear 0.5s, transform 0s;} 
+
+/*로딩중 표시하지 말아라*/
+body.loading #visual.section_01 .text_con h1{opacity: 0;} 
+
+/*위쪽으로 50px위치시켜라, 전체 텍스트가 나타날때 1초의 딜레이를 주며 0.85초동안 페이드인*/
+#visual.section_01 .text_con h4{ margin-top: 50px; opacity: 1; transition: all 1s linear 0.85s; color: #fff}  
+#visual.section_01 .text_con h4:before{ background: #fff }
+
+/*너도 로딩중에 표시하지 말아라*/
+body.loading #visual.section_01 .text_con h4{opacity: 0;} 
+body.loading #visual.section_01 .text_con h4:before{opacity: 0;} 
+
+/*텍스트 그림자를 넣되 그림자 크기를 30px만큼 넣어라*/
+#visual.section_01 .text_con h1,
+#visual.section_01 .text_con h4{ text-shadow: 0 0 30px rgba(0,0,0,0.75);} 
+/*-----------------------------------//비주얼-----------------------------------*/
+
+/*-----------------------------------룸//-----------------------------------*/
+#rooms.section_05{}
+#rooms.section_05 .width_con{}
+#rooms.section_05 .width_con .title_con{margin: 0 0 0 618px;}
+#rooms.section_05 .width_con .change_con{ position: relative; width: 1400px; margin: -183px -100px 0;}
+/*전체부분 위치값*/
+#rooms.section_05 .width_con .change_con .chng{ position: relative; width: 1200px; height: 180px; padding: 170px 0 0 0;}
+/*이미지 설정값*/
+#rooms.section_05 .width_con .change_con .img_con{position: absolute; display: inline-block; *display: inline; *zoom: 1;
+    width: 582px; height: 348px; border-radius: 4px; margin: -170px 36px 0 0;    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.35); cursor: pointer; overflow: hidden;}
+/*이미지 호버시 나오는 아이콘 설정값*/
+#rooms.section_05 .width_con .change_con .img_con .text{background: rgba(0,0,0,0.65); width: 36px; height : 36px; margin: 300px 0 0 535px; text-align: center; font-size: 72px; line-height: 20px; opacity: 0; transition: all 0.25s ease-in-out; border-radius: 4px;}
+/*이미지 호버시 나오는 아이콘 크기값*/
+#rooms.section_05 .width_con .change_con .img_con .text .material-symbols-rounded{ font-size : 36px;}
+#rooms.section_05 .width_con .change_con .img_con:hover .text{opacity: 1;}
+#rooms.section_05 .width_con .change_con .img_con:active .text{transform: scale(0.9);}
+#rooms.section_05 .width_con .change_con .box_con{margin: 0 0 0 618px; }
+/*박스 설정값*/
+#rooms.section_05 .width_con .change_con .box_con .box{ display: inline-block; *display: inline; *zoom: 1; width: 67px; height: 96px; border-radius: 4px; margin: 0 18px 0 0;  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.35); cursor: pointer; overflow: hidden; color: #665042; text-align: center; font-size: 11px; line-height: 1.15em;}
+#rooms.section_05 .width_con .change_con .box_con .box b{ display: block; font-size: 12px; text-transform: uppercase; margin:3px 0 7px;}
+#rooms.section_05 .width_con .change_con .box_con .box:hover{background-color: #ddd;}
+/*박스안 이모티콘 위치값*/
+#rooms.section_05 .width_con .change_con .box_con .box .material-symbols-rounded{margin: 15px 0 0 0;}
+/*하단 룸 설명 위치값*/
+#rooms.section_05 .width_con .change_con .text_con{ position: absolute; bottom:0; left: 618px; color: #665042; width:500px;}
+#rooms.section_05 .width_con .change_con .text_con .text{font-weight: bold;}
+#rooms.section_05 .width_con .change_con .text_con .info{}
+/*-----------------------------------//룸-----------------------------------*/
+
+/*-----------------------------------부대시설//-----------------------------------*/
+#facilities.section_06{} 
+#facilities.section_06 .bg_con{position:absolute; height:100%; width: 100%; opacity: 0.45;}
+#facilities.section_06 .width_con{} 
+#facilities.section_06 .width_con .title_con{ margin: 0 0 120px 0; }
+
+#facilities.section_06 .width_con .img_con{ width: calc(100% + 36px);  margin: -62px 0  0 -18px;}
+/*이미지박스 설정값*/
+#facilities.section_06 .width_con .img_con .imgs{display: inline-block; *display: inline; *zoom: 1;
+    width: 376px; height: 253px; border-radius: 4px; margin: 0 18px;    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.35); cursor: pointer; overflow: hidden;}
+/*이미지 크기값*/
+#facilities.section_06 .width_con .img_con .imgs .sub_img{ height: 100%; width:100%; transition: all 0.25s ease-in-out;}
+#facilities.section_06 .width_con .img_con .imgs:hover .sub_img{transform: scale(1.05);}
+#facilities.section_06 .width_con .img_con .imgs:active .sub_img{transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);}
+/*이미지 호버시 설정값*/
+#facilities.section_06 .width_con .img_con .imgs .sub_img .text{ height : 100%; text-align: center; line-height: 251px; font-size: 30px;  opacity: 0; transition: all 0.25s ease-in-out;}
+#facilities.section_06 .width_con .img_con .imgs .sub_img:hover .text{ opacity: 1;}
+
+
+/*모달창 갤러리 배경 설정값*/
+.gallery_cover{position: fixed; top:0; left:0; width:100%; height: 100%; background: rgba(0,0,0,0); backdrop-filter: blur(0); pointer-events: none; transition: all 0.15s linear;}
+.gallery_cover.on{background: rgba(0,0,0,0.85); backdrop-filter: blur(4px); pointer-events: auto; z-index: 99999;}
+/*모달창 갤러리 메인 위치값*/
+.gallery{position: fixed; top:50%; left:50%; width:1200px; margin: -350px 0 0 -600px;  pointer-events: none; opacity: 0; transition: all 0.15s linear;}
+.gallery.on{ z-index: 999999; opacity: 1; pointer-events: auto;}
+
+/*모달창 갤러리 닫기버튼 설정값*/
+.gallery button{position: absolute; top: 40px; right: -30px; background: rgba(0,0,0,0); color: #fff;  border: 0; border-radius: 30px; }
+.gallery img { border-radius: 4px;}
+
+.gallery .info { width : 1200px; height: 70px; text-align: center; font-size: 72px; }
+/*모달창 갤러리 메인사진 크기값*/
+.gallery .viewer { width:1200px; height:531px; margin-bottom: 36px;}
+.gallery .viewer img{ width: 100%;   }
+/*모달창 갤러리 하단사진 위치값*/
+.gallery .list { width:1236px; margin: 0 -18px; }
+/*모달창 갤러리 하단사진 크기값*/
+.gallery .list img{ width:273px; margin: 0 18px; cursor: pointer;}
+.gallery .list img.selected{box-shadow: 0 0 0 4px #fff;}
+
+
+
+
+/*-----------------------------------//부대시설-----------------------------------*/
+
+/*-----------------------------------다이닝//-----------------------------------*/
+#dining.section_07{background: #eee;}
+#dining.section_07 .bg_con{position:absolute; height:100%; width: calc(50% + 67px); min-width: 667px; transition: background 0.25s linear;}
+#dining.section_07 .bg_con:after{position:absolute; content:''; width:300px; height:100%; top:0; right:0; background: linear-gradient(90deg, rgba(238,238,238,0) 0%, rgba(238,238,238,1) 100%);}
+
+#dining.section_07 .width_con{}
+/*좌측 600px만큼 이동*/
+#dining.section_07 .width_con .title_con{ margin: 0 0 0 600px;} 
+
+/*이미지박스를 width값과 margin값만큼 위치 시키자*/
+#dining.section_07 .width_con .img_con{ width: 636px; margin: 60px -18px 0 582px;} 
+
+/*박스 모서리를 4px만큼깍고, 박스간의 간격을 18px만큼 띄고, 박스 그림자를 해당값만큼 넣어준다 마우스커서가 올라가면 변경 해주고, 이미지가 박스안에 들어갈때 박스 사이즈보다 넘칠시 잘라내기*/
+#dining.section_07 .width_con .img_con .imgs{ position:relative; display: inline-block; *display: inline; *zoom: 1; width: 170px; height:170px; border-radius: 4px; margin: 0 18px;    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.35); cursor: pointer; overflow: hidden;} 
+#dining.section_07 .width_con .img_con .imgs:after{ position:absolute; content:''; width: 158px; height:158px; top:3px; left: 3px; border: 3px solid rgba(238,238,238,0); border-radius: 2px; transition: border 0.25s linear;} 
+#dining.section_07 .width_con .img_con .imgs.selected div{transform: scale(1.05);} 
+#dining.section_07 .width_con .img_con .imgs.selected:after{border-color: rgba(238,238,238,1);} 
+
+/*박스내 이미지 변동시 transition 적용*/
+#dining.section_07 .width_con .img_con .imgs div{ height: 100%; width:100%; transition: all 0.25s ease-in-out;} 
+
+/*이미지 hover시 1.05배 만큼 늘려라*/
+#dining.section_07 .width_con .img_con .imgs:hover div{ transform: scale(1.05);} 
+
+/*-----------------------------------//다이닝-----------------------------------*/
+
+
+/*-----------------------------------멤버십//-----------------------------------*/
+#membership.section_08{ background: url(../img/bg_membership.jpg) 50% no-repeat; background-size: cover; background-attachment: fixed; overflow: hidden;}
+#membership.section_08:before{position: absolute; content:''; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.65) url(../img/cover_dot.png);}/*백그라운드 커버 패턴*/
+#membership.section_08 .width_con{width: 100%; text-align: center; }
+
+/* 커서 hover시 grab로 바꿔주기 */
+#membership.section_08 .card_box {margin-top: 60px; cursor: pointer; cursor: grab;} 
+
+/*커서 클릭시 grabbing로 바꿔주기*/
+#membership.section_08 .card_box:active {cursor: grabbing;} 
+
+#membership.section_08 .slick-list.draggable{ width: calc(100% + 411px); }
+/*카드사이즈설정*/
+#membership.section_08 .card_box div.cards { position: relative; display: inline-block; *display: inline; *zoom: 1; width: 375px; height:236px; margin: 0 18px; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px 0 rgba(0,0,0,0.35); 
+transition: transform 0.3s ease-out 0.05s, margin 0.25s ease-in-out;}
+
+#membership.section_08 .card_box div.cards.slick-current{ margin-left:411px;}
+
+#membership.section_08 .card_box div.cards:hover{ transition: transform 0s, margin 0.25s ease-in-out;}
+
+/*카드 빛반사 */
+#membership.section_08 .card_box div.cards .reflect { position: absolute; top: -75%; left: -100%; width: 200%; height: 200%; transition: inherit; z-index: 1; pointer-events: none;} 
+#membership.section_08 .card_box div.cards .reflect:before{ position: absolute; content:''; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(-45deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 75%);}
+
+#membership.section_08 .card_box div.cards img { width: 100%;}
+#membership.section_08 .membership_info { position: absolute; width: 345px; height: 266px; top: 271px; left: 50%; margin: 0 0 0 -392px; padding: 0 422px 0 30px; border: 3px solid #665042; border-radius: 27px; text-align: left;}
+#membership.section_08 .membership_info > div { display: none; margin: 3px 0 0 0;}
+#membership.section_08 .membership_info h5{font-size: 24px; font-weight: normal; color: #fff;}
+#membership.section_08 .membership_info h6{ font-size: 12px; line-height: 1.15em;}
+#membership.section_08 .membership_info li{list-style-type: '-  '; list-style-position: inside;}
+#membership.section_08 .membership_info li li{list-style-type: disc;}
+
+
+
+
+
+/*-----------------------------------//멤버십-----------------------------------*/
+
+/*-----------------------------------투어//-----------------------------------*/
+#tour.section_09{background: #eee;}
+#tour.section_09 .width_con{}
+#tour.section_09 .width_con .title_con center{}
+/*이미지 크기값*/
+#tour.section_09 .width_con .img_con{ width: calc(100% + 36px);  margin: 24px 0 0 -18px;}
+/*이미지 설정값*/
+#tour.section_09 .width_con .img_con .imgs{display: inline-block; *display: inline; *zoom: 1; width: 273px; border-radius: 4px; margin: 36px 18px 0; overflow: hidden; box-shadow: 0 2px 6px 0 rgba(0,0,0,0.35);}
+#tour.section_09 .width_con .img_con .imgs > div:first-child{ height: 190px;}
+/*이미지 크기값*/
+
+/*텍스트박스 크기값*/
+/*텍스트박스 설정값*/
+#tour.section_09 .width_con .img_con .texts{text-align: center; display: inline-block; *display: inline; *zoom: 1 ; width: 273px; height: 270px; box-shadow: 0 0 30px 30px #665042; background: #665042; }
+/*박스안 글자내용 설정값*/
+#tour.section_09 .width_con .img_con .texts .info{ background: #665042; text-align: center;  padding: 15px 30px 0; width: 100%; box-sizing: border-box; font-size: 15px; line-height: 1.25em; opacity: 1; font-family: 'Marcellus', serif; }
+/*-----------------------------------//투어-----------------------------------*/
+
+/*-----------------------------------컨택트//-----------------------------------*/
+/*제목박스 만들기*/
+#contact.section_10{ height:750px; overflow: hidden;} 
+#contact.section_10 h2{ position: absolute; top:0; left: 50%; /*상자 가운데 위치*/
+    width: 583px; padding: 10px 0 30px 0; margin: 0 0 0 -290px;
+    background: #eee; /*색상넣기*/
+    border-radius: 0px 0 8px 8px; /*둥글게 깍기*/
+    text-align: center; /*센터정렬*/
+    z-index: 1;}    
+
+/*상단박스 윗부분 모양설정*/
+#contact.section_10 h2:after,
+#contact.section_10 h2:before{position:absolute; content:''; top:0; width: 30px; height:8px; }
+#contact.section_10 h2:after{right:-8px; background: radial-gradient(circle at 100% 100%, transparent 7.5px, #eee 8px); }
+#contact.section_10 h2:before{ left:-8px; background: radial-gradient(circle at 0% 100%, transparent 7.5px, #eee 8px); }
+
+/*구글맵*/
+#contact.section_10 iframe{ width: 100%; height:1050px; margin-top:-150px; /*맵 잘라서 맞추기*/
+    filter: invert(1) saturate(0) sepia(0.35);}/*맵 색상변경*/
+
+/*구글 moreview 버튼생성*/
+#contact.section_10 .btn_view_googlemap{position: absolute; bottom: 120px; left: 50%; margin: -18px 0 0 -85px; height: 56px; padding: 8px 0px; line-height: 1em;} 
+/*-----------------------------------//컨택트-----------------------------------*/
+
+
+

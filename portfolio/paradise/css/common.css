@@ -1,0 +1,381 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Niconne&display=swap');
+@import url('https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+ /*------------아이콘------------*/
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL'0,/*채우기*/
+        'wght'600,/*선 두께*/
+        'GRAD'0,/*강조*/
+        'opsz'40/*크기*/
+}
+
+/*
+font-family: 'Bilbo Swash Caps', cursive;
+font-family: 'Niconne', cursive;
+*/
+
+/*------------기본폰트설정------------*/
+html,
+body {
+    font-family: 'Marcellus SC', serif;
+    color: #fff; 
+    font-size: 16px;
+    min-width: 1200px;
+}
+
+body.loading {}
+
+/*------------로딩화면 배경------------*/
+.loading_cover {
+    position: fixed;/*위치 고정*/
+    top: 0;/*위에서 위치지정*/
+    left: 0;/*좌측에서 위치지정*/
+    width: 100%;/*가로전체 사용*/
+    height: 100%;/*세로 전체 사용*/
+    background: #000;/*배경색 검정*/
+    z-index: 999999;/*제일 앞으로*/
+    opacity: 0;/*투명하게*/
+    pointer-events: none;/*포인터효과 없음*/
+} 
+
+body.loading .loading_cover {
+    opacity: 1;
+}
+
+/*------------로딩화면 이미지------------*/
+.loading_cover img {
+    position: absolute;/*위치는 고정*/
+    top: 50%;/*가운데 정렬*/
+    left: 50%;/*가운데 정렬*/
+    margin: -125px 0 0 -250px;/*가운데 정렬*/
+} 
+
+h1,/*비주얼 큰글자*/
+h2,/*제목*/
+h3,/*소제목*/
+h4,/*내용*/
+h5,
+h6 {
+    position: relative;
+}
+
+h1 {
+    font-family: 'Niconne', cursive;
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 48px;
+    color: #665042;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 28px;
+    color: #665042;
+}
+
+h4 {
+    margin: 36px 0 0 0; /*위쪽에서 밀어냄*/
+    font-size: 18px; 
+    line-height: 1.35em; /*줄 간격 조절*/
+    color: #665042;
+}
+
+h4:before {
+    position: absolute;
+    content: '';
+    width: 36px; /*가로크기*/
+    height: 3px; /*세로크기*/
+    margin-top: -18px; /*위쪽으로 들여냄*/
+    background: #665042;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 1.35em;
+    color: #888;
+}
+
+h6 {}
+
+h7 {}
+
+/*------------섹션내용------------*/
+.title_con {
+    color: #111;
+}
+
+.title_con.center {
+    text-align: center;
+}
+
+.title_con.center h4:before {
+    left: 50%;
+    margin-left: -18px;
+}
+
+.title_con.right {
+    text-align: right;
+}
+
+.title_con.dark {
+    color: #fff;
+}
+
+.title_con.dark h2,
+.title_con.dark h4 {
+    color: #fff;
+}
+
+.title_con.dark h4:before {background: #fff}
+
+/*------------다이닝 more view 상자----------------*/
+.title_con .btn {
+    margin-top: 36px;/*버튼 위치*/
+}
+
+a.btn {
+    display: inline-block;/*영역설정*/
+    *display: inline;
+    *zoom: 1;
+    height: 36px;/*박스높이*/
+    line-height: 36px;/*글자위치*/
+    width: 170px;/*박스가로크기*/
+    text-align: center;/*글자가운데정렬*/
+    font-size: 18px;/*글자크기*/
+    text-decoration: none;/*글자효과없음*/
+    box-sizing: border-box;/*모서리둥근박스*/
+    border-radius: 4px;/*모서리 4px만큼 깎임*/
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);/*박스그림자*/
+}
+
+/*------------다이닝 more view 상자 설정------------*/
+a.btn_a {
+    background: #665042;/*배경색*/
+    color: #fff;/*글자색*/
+    transition: all 0.1s linear;/*효과*/
+} 
+
+/*------------다이닝 more view hover------------*/
+a.btn_a:hover {
+    background: #fff;/*배경색*/
+    color: #665042;/*글자색*/
+} 
+
+/*------------다이닝 more view active------------*/
+a.btn_a:active {
+    background: #ddd;/*배경색*/
+    transform: scale(0.95); /*상자 축소값*/
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);/*그림자*/
+} 
+
+.btn.btn_mini{width:40px; height:40px; }
+.btn_gotop{ position: fixed; bottom: 50px; left:50%; margin-left: 700px; z-index: 999; opacity: 1; pointer-events: auto;}
+.btn_gotop span{ padding-top: 8px; transition: inherit;}
+.btn_gotop:hover span{ padding-top: 6px;}
+
+
+
+
+
+a.btn_c {}
+
+a.btn_d {}
+
+.slick-prev,
+.slick-next {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    color: #665042;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+}
+
+.slick-prev {}
+
+.slick-next {}
+
+.slick-prev span {
+    font-size: 14px;
+    margin: 1px 0 0 4px;
+}
+
+.slick-next span {
+    font-size: 14px;
+    margin: 1px 0 0 2px;
+}
+
+
+
+.wrap {}
+
+.wrap > * {}
+
+.sections {
+    position: relative;
+}
+
+/*------------전체레이아웃 설정값------------*/
+.width_con {
+    position: relative;
+    width: 1200px;/*가로 1200px*/
+    margin: 0 auto;/*중앙위치*/
+    padding: 120px 0;/*상하여백*/
+    /*background: rgba(0,0,0,0.15);*/
+} 
+
+/*------------헤더 네비 설정값------------*/
+#header,
+#header.scroll:hover {
+    position: fixed; width: 100%; top: 0; left: 0; height: 80px; background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%); /*네비 height 80px만큼 투명한 그라데이션 넣기 */
+    
+    text-transform: uppercase; /*글자 대문자*/
+    transition: all 0.5s linear, opacity 1.5s linear 1s, margin-top 1.5s ease-in-out 1s; /*스크롤시 네비게이션 이동값*/ 
+    backdrop-filter: blur(0px);
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+/*로딩후 네비게이션 내리기*/
+body.loading #header {
+    margin-top: -80px; 
+    opacity: 0;
+}
+
+/*네비 50px만큼 넣기*/
+#header.scroll {
+    height: 50px; 
+}
+
+/*네비 크기*/
+#header .width_con {
+    padding: 0;
+    transition: inherit;/*부모 요소의 속성값을 상속*/
+} 
+
+/*CI로고 위치 설정*/
+#header .width_con a.btn_home,
+#header.scroll:hover .width_con a.btn_home {
+    position: relative;
+    top: 13px; /*위에서 위치지정*/
+    display: inline-block; /*영역 설정*/
+    transition: inherit; /*부모 요소의 속성값을 상속*/
+ } 
+
+/*스크롤시 CI로고 위치*/
+#header.scroll .width_con a.btn_home {
+    top: -2px;
+} 
+
+/*CI로고 이미지 크기*/
+#header .width_con a.btn_home img {
+    width: 170px;
+}
+
+/*네비 리스트 위치*/
+#header .width_con ul.nav,
+#header.scroll:hover .width_con ul.nav {
+    position: absolute;
+    top: 40px; /*위에서 위치지정*/
+    right: 0; /*오른쪽 위치지정*/
+    transition: inherit; /*부모 요소의 속성값을 상속*/
+}
+
+/*네비 리스트 스크롤시 위치*/
+#header.scroll .width_con ul.nav {
+    top: 16px;
+}
+
+/*네비 리스트 호버시 전체 색상*/
+#header .width_con ul.nav:hover li a {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/*네비 리스트 설정*/
+#header .width_con ul.nav li {
+    display: inline-block; /*영역 설정*/
+    *display: inline; 
+    *zoom: 1; 
+    margin: 0 0 0 36px; /*좌측에서 밀어냄*/
+    font-family: 'Marcellus SC', cursive;
+}
+
+/*네비 리스트 상세 설정*/
+#header .width_con ul.nav li a {
+    color: rgba(255, 255, 255, 1); /*색상-흰색*/
+    font-size: 18px; 
+    text-decoration: none; /*글자 효과 없음*/
+    transition: color 0.15s linear; /*효과*/
+}
+
+/*네비 리스트 호버시 색상*/
+#header .width_con ul.nav li a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+/*네비 커스텀 위치*/
+#header .width_con ul.nav_customer,
+#header.scroll:hover .width_con ul.nav_customer {
+    position: absolute;
+    top: 10px; /*위에서 위치지정*/
+    right: 0; /*오른쪽 위치지정*/
+    transition: inherit;
+}
+
+/*네비 커스텀 스크롤시 위치*/
+#header.scroll .width_con ul.nav_customer {
+    top: -20px;
+}
+
+/*네비 커스텀 호버시 전체 색생*/
+#header .width_con ul.nav_customer:hover li a {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/*네비 커스텀 설정*/
+#header .width_con ul.nav_customer li {
+    display: inline-block; /*영역설정*/
+    *display: inline;
+    *zoom: 1;
+    margin: 0 0 0 36px; /*좌측에서 밀어냄*/
+    font-family: 'Marcellus SC', serif;
+}
+
+/*네비 커스텀 상세 설정*/
+#header .width_con ul.nav_customer li a {
+    color: rgba(255, 255, 255, 1); /*색상-흰색*/
+    font-size: 12px; /*글자 사이즈*/
+    text-decoration: none; /*글자 효과 없음*/
+    transition: color 0.5s linear; /*효과*/
+}
+
+#header .width_con ul.nav_customer li a:hover{
+    color: rgba(255, 255, 255, 1);  
+}
+
+/*마우스 호버한부분 돋보이게 색상 바꿔주기*/
+/*#header .width_con ul.nav_customer li a:hover{color: rgba(255,255,255,1);}*/
+
+#footer {background: #303030; }
+#footer .width_con{ text-align: center;}
+#footer .width_con img.supporter{ height: 62px;}
+#footer .width_con img.ci{ display: block; margin: -65px auto -35px; opacity: 0.25;}
+#footer .width_con .info_con {text-align: center; margin: 30px 0 0 0; color: #888; text-transform: uppercase;}
+#footer .width_con .info_con p{ display: inline-block; text-align: left; line-height: 1.5em;}
+#footer .width_con .info_con p.right{ text-align: right;}
+#footer .width_con .info_con p b{ margin:0 0 0 4px;}
+#footer .width_con .info_con p span { font-family: 'Marcellus', serif; text-transform: lowercase;}
+#footer .width_con .info_con p a.btn_store{ display: inline-block;  width: 136px; margin:9px; opacity: 0.5; background: #444; border-radius: 5px; transition: all 0.075s linear;}
+#footer .width_con .info_con p a.btn_store img{width: 100%;}
+#footer .width_con .info_con p a.btn_store:hover{display: inline-block;  width: 136px; margin:9px;  opacity: 1;}
+#footer .width_con .info_con p a.btn_store:active{transform: scale(0.975); box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);}
+#footer .width_con ul.footer_nav{ margin: 30px 0; padding: 0 0 30px; border-bottom: 1px solid #444;}
+#footer .width_con ul.footer_nav li{ display: inline-block; margin: 0 18px;}
+#footer .width_con ul.footer_nav li a{ color: #888; }
+#footer .width_con ul.footer_nav li a:hover{ color: #fff; }

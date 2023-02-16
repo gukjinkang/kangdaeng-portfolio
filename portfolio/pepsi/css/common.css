@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html, body{font-family: 'Roboto', sans-serif; background: #eee; color: #eee; font-size: 14px; overflow-x: hidden;}
+.wrap{}
+.wrap > *{}
+.sections{position: relative;}
+.width_con{position: relative; width: 1400px; margin: 0 auto; padding: 120px 0; transition: all 0.25s ease-in-out;}
+body.loading .loading_con{opacity: 1;}
+.loading_con{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0; pointer-events: none; z-index: 999999;}
+.loading_con img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+::-webkit-scrollbar{display: none;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+h1 {font-family: 'Bebas Neue', cursive; font-size: 100px;}
+h2 {font-family: 'Bebas Neue', cursive; font-size: 70px; color: #111;}
+h3 {font-family: 'Bebas Neue', cursive; color: #111; font-size: 34px;}
+h4 {margin: 30px 0 0 0; color: #111; font-size: 16px; line-height: 1.15em;}
+h4:before {position: absolute; content: ''; width: 40px; height: 3px; margin-top: -18px; background: #015dcc;}
+h5 {}
+h6 {}
+h7 {}
+
+.title_con .btn {margin-top: 36px;}
+    
+a.btn{display: inline-block; *display: inline; *zoom: 1; height: 36px; line-height: 36px; width: 170px; text-align: center; font-size: 18px; text-decoration: none; box-sizing: border-box; border-radius: 4px; box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+}
+
+a.btn_a{background: #015dcc; color: #eee; transition: all 0.1s linear;}
+a.btn_a:hover {background: #fff; color: #015dcc;} 
+a.btn_a:active {background: #ddd; transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);} 
+
+.title_con.center{text-align: center;}
+.title_con.center h4:before {left: 50%; margin-left: -30px;}
+.info_con.center{text-align: center;}
+
+.slick-prev,
+.slick-next{}
+.slick-prev{}
+.slick-next{}
+.slick-prev span{ }
+.slick-next span{ }
+
+.fixed_bg{clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);}
+.fixed_bg_img{position: fixed; top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%, -50%); filter: blur(8px);}
+.fixed_bg_img + .width_con{z-index: 2;}
+
+.two_con{width: calc(100% + 40px); margin: 0 -20px;}
+.two_con > *{display: inline-block; *display: inline; *zoom: 1; width: calc(50% - 40px); margin: 0 20px; vertical-align: top;}
+
+.six_con{width: calc(100% + 40px); margin: 0 -20px;}
+.six_con > *{display: inline-block; *display: inline; *zoom: 1; width: calc(16.666% - 40px); margin: 0 20px;}
+
+.four_con{width: calc(100% + 40px); margin: 0 -20px;}
+.four_con > li{display: inline-block; *display: inline; *zoom: 1; width: calc(25% - 40px); margin: 0 20px; vertical-align: top;}
+
+.three_con{width: calc(100% + 40px); margin: 0 -20px;}
+.three_con > * {display: inline-block; *display: inline; *zoom: 1; width: calc(33.33% - 40px); margin: 0 20px; vertical-align: top;}
+
+.lookbook_con{width: calc(100% + 40px); margin: 0 -20px;}
+.lookbook_con > li {display: inline-block; *display: inline; *zoom: 1; width: calc(33.33% - 40px); margin: 0 20px; vertical-align: bottom;}
+
+#header,
+#header.scroll:hover {position: fixed; width: 100%; top: 0; left: 0; height: 80px; background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%); backdrop-filter: blur(10px); font-family: 'Bebas Neue', cursive; z-index: 10;}
+#header .width_con{padding: 0;}
+#header .width_con a.btn_home{position: relative; top: 16px; display: block;}
+#header .width_con a.btn_home img{width: 50px;}
+#header .width_con ul.nav{position: absolute; top: 30px; right: 0;}
+#header .width_con ul.nav img{display: none;}
+#header .width_con ul.nav li{display: inline-block; *display: inline; *zoom: 1; margin: 0 0 0 30px;}
+#header .width_con ul.nav li a{color: #eee; font-size: 24px; text-decoration: none;}
+#header .width_con ul.nav:hover li a {color: rgba(255, 255, 255, 0.65);}
+#header .width_con ul.nav li a:hover {color: rgba(255, 255, 255, 1);}
+#header .width_con .btn_open_nav {position: absolute; right: 40px; top: 12px; height: 26px; width: 30px; padding: 5px; cursor: pointer; z-index: 10; display: none; transition: all 0.25s ease-in-out;}
+#header .width_con .btn_open_nav div, #header .width_con .btn_open_nav:before, #header .width_con .btn_open_nav:after {content: '';position: absolute;left: 5px;width: 30px;height: 4px;background: #fff;border-radius: 1px; transition: all 0.25s ease-in-out, top 0.25s ease-in-out 0.25s, bottom 0.25s ease-in-out 0.25s, opacity 0s 0.25s;}
+body.open_nav #header .width_con .btn_open_nav {transform: translateX(-250px);}
+body.open_nav #header .width_con .btn_open_nav:before {transform: rotate(135deg);}
+body.open_nav #header .width_con .btn_open_nav:after {transform: rotate(-135deg); bottom: 16px;}
+body.open_nav #header .width_con .btn_open_nav div {opacity: 0;}
+body.open_nav #header .width_con .btn_open_nav div, body.open_nav #header .width_con .btn_open_nav:before {top: 16px;}
+body.open_nav #header .width_con .btn_open_nav div, body.open_nav #header .width_con .btn_open_nav:before, body.open_nav #header .width_con .btn_open_nav:after {transition: all 0.25s ease-in-out 0.25s, top 0.25s ease-in-out, bottom 0.25s ease-in-out, opacity 0s 0.25s;}
+
+#footer{background: #015dcc;}
+#footer .width_con{text-align: center; padding: 120px 0 50px 0;}
+#footer .width_con .info_con{margin: 0 0 0 0; font-size: 14px;}
+#footer .width_con .info_con .sns_con{margin-left: 13px;}
+#footer .width_con .info_con .sns_con a{display: inline-block; *display: inline; *zoom: 1; margin: 30px 15px; font-size: 30px; color: #eee; transition: all 0.075s linear;}
+#footer .width_con .info_con .sns_con a:hover{color: #111; opacity: 0.8;}
+#footer .width_con .info_con .sns_con a:active{transform: scale(0.95);}
+#footer .width_con .info_con p{display: inline-block; text-align: left; line-height: 1.5em;}
+#footer .width_con .info_con p.right{ text-align: right; margin-left: 60px;}
+#footer .width_con .info_con .footer_nev{margin: 30px 0 30px 0; font-size: 18px;}
+#footer .width_con .info_con .footer_nev a{margin: 0 15px; color: #eee; text-decoration: none;}
+#footer .width_con .info_con .footer_nev a:hover{color: #111; opacity: 0.8;}
+#footer .width_con .info_con .copy{font-size: 12px;}

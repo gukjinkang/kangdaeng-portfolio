@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+
+@media all and (min-width:0px) and (max-width:999px){
+    h2 {font-size: 40px;}
+    h3 {font-size: 20px;}
+    h4 {font-size: 14px;}
+    h4:before {width: 40px; height: 3px;}
+    
+    .title_con.center h4:before {left: 50%; margin-left: -22px;}
+    
+    html.lock{overflow: hidden;}
+    .open_nav_cover{ position: fixed; top:0; left:0; height:0vh; width:100vw; backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px); background: rgba(0,0,0,0); transition: backdrop-filter 0.25s linear, height 0s linear 0.25s, background 0.25s linear; z-index: 8;}
+    html.lock .open_nav_cover{height: 100vh; background: rgba(0,0,0,0.35); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: backdrop-filter 0.25s linear, background 0.25s linear;}
+
+    #header{height: 60px;}
+    #header .width_con a.btn_home{top: 16px;}
+    #header .width_con a.btn_home img{width: 40px; margin-top: -5px;}
+    #header .width_con ul.nav {position: fixed; right: -300px; top: 0; height: 100vh; width: 300px; border-radius: 20px 0 0 20px; transition: right 0.25s ease-in-out; z-index: 1; background: #015dcc;}
+    
+    #header .width_con .btn_open_nav{display: block; right: -5px;}
+    body.open_nav #header .width_con .btn_open_nav{right: 25px;}
+    #header .width_con .btn_open_nav:before{top: 5px;}
+    #header .width_con .btn_open_nav div{top: 16px;}
+    #header .width_con .btn_open_nav:after{bottom: 5px;}
+    
+    #header .width_con ul.nav img{position: absolute; display: block; bottom: 30px; left: 50%; transform: translateX(-50%);}
+    #header .width_con ul.nav li{display: block; margin: 35px 0 0px 40px;}
+    #header .width_con ul.nav li a{font-size: 34px;}
+    #header .width_con ul.nav:hover li a {color: #eee;}
+    
+    body.open_nav #header .width_con ul.nav {right: 0; text-align: left;}
+    
+    #visual.section_01 .width_con .title_con img{width: 35%; height: auto;}
+    
+    #lookbook.section_04 .width_con .title_con span{font-size: 25px;}
+    #lookbook.section_04 .iu_center span{font-size: 20px; padding: 10px; letter-spacing: 2px;}
+    
+    #challenge.section_07 .width_con .six_con li .imgs .active_con .tag{font-size: 12px;}
+    #challenge.section_07 .width_con .six_con li .imgs .btn {position: absolute; margin: -20px 0 0 -15px; font-size: 36px;}
+
+    #news.section_08 .width_con .title_con h2{font-size: 30px;}
+    #news.section_08 .width_con .news_zone .inside{text-decoration: none;}
+    
+    #footer .width_con{padding: 80px 0 50px 0;}
+    #footer .width_con .info_con{font-size: 12px;}
+    #footer .width_con .info_con .sns_con a{margin: 20px 15px; font-size: 30px;}
+    #footer .width_con .info_con .footer_nev{font-size: 14px; margin-left: -8px;}
+    #footer .width_con .info_con .footer_nev a {margin: 0 8px;}
+}
+
+/*--------------------0~479//--------------------*/
+@media all and (min-width:0px) and (max-width:479px){
+    .width_con{width: calc(100% - 40px); padding: 80px 0;} /*마진 좌우 : 20*/
+    
+    .six_con{width: calc(100% + 20px); margin: 0 -10px -20px;}
+    .six_con > *{width: calc(33.33% - 20px); margin: 0 10px 20px;}
+    
+    .four_con{width: calc(100% + 20px); margin: 0 -10px -20px;}
+    .four_con > li{width: calc(50% - 20px); margin: 0 10px 20px;}
+    
+    .two_con{width: calc(100% + 20px); margin: 0 -10px -20px;}
+    .two_con > *{width: calc(100% - 20px); margin: 0 10px 20px;}
+    
+    .three_con{width: calc(100% + 20px); margin: 0 -10px -20px;}
+    .three_con > * {width: calc(33.33% - 20px); margin: 0 10px 20px;}
+    
+    h2{font-size: 30px;}
+    a.btn{width: 120px; height: 30px; line-height: 32px; font-size: 12px;}
+
+    body.open_nav #header .width_con .btn_open_nav{right: -5px;}
+    #header .width_con ul.nav{width: 260px;}
+    
+    #visual.section_01 .width_con{left: 20px; margin: -30px 0 0 0;}
+    #visual.section_01 .width_con .title_con img{width: 25%; height: auto;}
+    #visual.section_01 .width_con .title_con h2{font-size: 22px;}
+    #visual.section_01 .width_con .title_con h3{font-size: 12px; margin-top: 20px;}
+    #visual.section_01 .width_con .title_con h3:before {width: 30px;margin-top: -10px;}
+    
+    #brands.section_02{}
+    #brands.section_02 .width_con{}
+    #brands.section_02 .width_con .two_con img{display: block; width: 35%; margin: 0 auto;}
+    #brands.section_02 .width_con .two_con{text-align: center;}
+    #brands.section_02 .width_con .two_con .text_box{width: calc(100% - 40px); margin: -60px 0 30px 0; padding: 75px 5px 25px 5px; font-size: 26px; text-align: center;}
+    
+    #history.section_03 .four_con img{width: 30%;}
+    
+    #lookbook.section_04 .lookbook_con{position: relative; width: calc(100% + 20px); margin: 0 -10px -20px; }
+    #lookbook.section_04 .lookbook_con > li {width: calc(50% - 20px); margin: 0 10px 20px;}
+    #lookbook.section_04 .lookbook_con .iu_center { position: absolute; bottom: 100%;}
+    #lookbook.section_04 .width_con .margin_guide{ display: block; opacity: 0; visibility: hidden; width: calc(50% - 20px); margin: 0 10px 20px;}
+    #lookbook.section_04 .width_con .title_con{width: 165px; top:75px; left: 0; transform: translateX(0); text-align: left;}
+    #lookbook.section_04 .title_con h4{line-height: 0.9em;}
+    #lookbook.section_04 .title_con h4:before{left:0; margin: -18px 0 0 0;}
+    
+    #time.section_05 .title_con h2{font-size: 24px; width: 50%;}
+    #time.section_05 .title_con h3{font-size: 18px;}
+    #time.section_05 .title_con h4{font-size: 12px; width: 50%;}
+    
+    #package.section_06 .three_con .box_con img{width: 100%;}
+    #package.section_06 .three_con .box_con .hover_con{top: 40%; font-size: 12px; line-height: 0.7em;}
+    
+    #challenge.section_07 .width_con .six_con li .imgs .btn {position: absolute;}
+    
+    #news.section_08 .width_con .title_con{display: block; text-align: center;  margin-bottom: 30px;}
+    #news.section_08 .width_con .title_con h4:before{left: 50%; margin-left: -22px;}
+    #news.section_08 .width_con .news_zone{ width: 100%; margin: 0 auto;}
+    #news.section_08 .width_con .news_zone .inside{padding: 20px;}
+    #news.section_08 .width_con .news_zone .inside img{display: block; width: 100%; margin-bottom: 30px;}
+    #news.section_08 .width_con .news_zone .inside .info{display: block; width: 100%;}
+    #news.section_08 .width_con .news_zone .inside .info h3{font-size: 20px; line-height: 1em;}
+    #news.section_08 .width_con .news_zone .inside .info p{line-height: 1em; font-size: 14px;}
+}
+
+/*--------------------480~599//--------------------*/
+@media all and (min-width:480px) and (max-width:599px){
+    .width_con{width: calc(100% - 50px); padding: 80px 0;} /*마진 좌우 : 25*/
+    
+    .six_con{width: calc(100% + 25px); margin: 0 -12.5px -25px;}
+    .six_con > *{width: calc(33.33% - 25px); margin: 0 12.5px 25px;}
+    
+    .four_con{width: calc(100% + 25px); margin: 0 -12.5px -25px;}
+    .four_con > li{width: calc(50% - 25px); margin: 0 12.5px 25px;}
+    
+    .two_con{width: calc(100% + 25px); margin: 0 -12.5px -25px;}
+    .two_con > *{width: calc(100% - 25px); margin: 0 12.5px 25px;}
+    
+    .three_con{width: calc(100% + 25px); margin: 0 -12.5px -25px;}
+    .three_con > * {width: calc(33.33% - 25px); margin: 0 12.5px 25px;}
+    
+    .lookbook_con{width: calc(100% + 25px); margin: 0 -12.5px -25px; }
+    .lookbook_con > li {width: calc(33.33% - 25px); margin: 0 12.5px 25px;}
+
+    h2{font-size: 34px;}
+    a.btn{width: 120px; height: 30px; line-height: 32px; font-size: 12px;}
+     
+    #visual.section_01 .width_con{left: 25px; margin: -30px 0 0 0;}
+    #visual.section_01 .width_con .title_con img{width: 30%; height: auto;}
+    #visual.section_01 .width_con .title_con h2{font-size: 22px;}
+    #visual.section_01 .width_con .title_con h3{font-size: 12px; margin-top: 20px;}
+    #visual.section_01 .width_con .title_con h3:before {width: 30px;margin-top: -10px;}
+    
+    #brands.section_02{}
+    #brands.section_02 .width_con{}
+    #brands.section_02 .width_con .two_con img{display: block; width: 35%; margin: 0 auto;}
+    #brands.section_02 .width_con .two_con{text-align: center;}
+    #brands.section_02 .width_con .two_con .text_box{width: calc(100% - 40px); margin: -60px 0 30px 0; padding: 75px 5px 25px 5px; font-size: 26px; text-align: center;}
+    
+    #history.section_03 .four_con img{width: 30%;}
+    
+    #lookbook.section_04 .lookbook_con{position: relative; width: calc(100% + 20px); margin: 0 -10px -20px; }
+    #lookbook.section_04 .lookbook_con > li {width: calc(50% - 20px); margin: 0 10px 20px;}
+    #lookbook.section_04 .lookbook_con .iu_center {position: absolute; bottom: 100%;}
+    #lookbook.section_04 .width_con .margin_guide{display: block; opacity: 0; visibility: hidden; width: calc(50% - 20px); margin: 0 10px 20px;}
+    #lookbook.section_04 .width_con .title_con{width: 260px; top: 100px; left: 0; transform: translateX(0); text-align: left;}
+    #lookbook.section_04 .title_con h4{line-height: 1em;}
+    #lookbook.section_04 .title_con h4:before{left:0; margin: -18px 0 0 0;}
+    
+    #time.section_05 .title_con h2,
+    #time.section_05 .title_con h4{width: 50%;}
+    
+    #package.section_06 .three_con .box_con img{width: 100%;}
+    #package.section_06 .three_con .box_con .hover_con{top: 40%; font-size: 16px; line-height: 0.7em;}
+    
+    #challenge.section_07 .width_con .six_con li .imgs .active_con .tag{max-width: 130px;}
+    #challenge.section_07 .width_con .six_con li .imgs .btn {position: absolute;}
+    
+    #news.section_08 .width_con .title_con{display: block; text-align: center;  margin-bottom: 30px;}
+    #news.section_08 .width_con .title_con h4:before{left: 50%; margin-left: -22px;}
+    #news.section_08 .width_con .news_zone{width: 100%; margin: 0 auto;}
+    #news.section_08 .width_con .news_zone .inside{padding: 20px;}
+    #news.section_08 .width_con .news_zone .inside img{display: block; width: 100%; margin-bottom: 30px;}
+    #news.section_08 .width_con .news_zone .inside .info{display: block; width: 100%;}
+    #news.section_08 .width_con .news_zone .inside .info h3{font-size: 20px; line-height: 1em;}
+    #news.section_08 .width_con .news_zone .inside .info p{line-height: 1em; font-size: 14px;}
+    
+    
+}
+
+/*--------------------600~999//--------------------*/
+@media all and (min-width:600px) and (max-width:999px){
+    .width_con{width: calc(100% - 60px);} /*마진 좌우 : 30*/
+    
+    .six_con{width: calc(100% + 30px); margin: 0 -15px -30px;}
+    .six_con > *{width: calc(16.66% - 30px); margin: 0 15px 30px;}
+    
+    .four_con{width: calc(100% + 30px); margin: 0 -15px -30px;}
+    .four_con > li{width: calc(50% - 30px); margin: 0 15px 30px;}
+    
+    .two_con{width: calc(100% + 30px); margin: 0 -15px -30px;}
+    .two_con > *{width: calc(100% - 30px); margin: 0 15px 30px;}
+    
+    .three_con{width: calc(100% + 30px); margin: 0 -15px -30px;}
+    .three_con > * {width: calc(33.33% - 30px); margin: 0 15px 30px;}
+    
+    .lookbook_con{width: calc(100% + 30px); margin: 0 -15px -30px; }
+    .lookbook_con > li {width: calc(33.33% - 30px); margin: 0 15px 30px;}
+    
+    #visual.section_01 .width_con{left: 30px; margin: -55px 0 0 0;}
+    #visual.section_01 .width_con .title_con h2{font-size: 40px;}
+    #visual.section_01 .width_con .title_con h3{font-size:16px; margin-top: 40px;}
+    #visual.section_01 .width_con .title_con h3:before {margin-top: -20px;}
+    
+    #brands.section_02{}
+    #brands.section_02 .width_con{}
+    #brands.section_02 .width_con .two_con{position: relative; left: 8%;}
+    #brands.section_02 .width_con .text_box{width: 66.66%; margin: 0px 0px 21px -70px; padding: 30px 0 30px 110px;}
+    
+    #history.section_03 .four_con img{width: 50%;}
+    
+    #lookbook.section_04 .title_con{}
+    #lookbook.section_04 .lookbook_con img{}
+    #lookbook.section_04 .lookbook_con .iu_center img{}
+
+    #time.section_05 .title_con h2{width: 50%;}
+    
+    #package.section_06 .three_con .box_con img{width: 100%;}
+    #package.section_06 .three_con .box_con .hover_con{font-size: 20px;}
+    
+    #news.section_08 .width_con .title_con h2{font-size: 58px;}
+    #news.section_08 .width_con .title_con{display: block; text-align: center;  margin-bottom: 30px;}
+    #news.section_08 .width_con .title_con h4:before{left: 50%; margin-left: -25px;}
+    #news.section_08 .width_con .news_zone{display: block; margin: 0 auto;}
+    #news.section_08 .width_con .news_zone .inside img{display: block; width: 100%; margin-bottom: 30px;}
+    #news.section_08 .width_con .news_zone .inside .info{display: block; width: 100%;}
+    #news.section_08 .width_con .news_zone .inside .info h3{font-size: 20px; line-height: 1em;}
+    #news.section_08 .width_con .news_zone .inside .info p{font-size: 14px; line-height: 1em;}
+}
+
+/*--------------------1000~1239//--------------------*/
+@media all and (min-width:1000px) and (max-width:1239px){
+    .width_con{width: calc(100% - 80px);} /*마진 좌우 : 40*/
+    h2{font-size: 60px;}
+    
+    #header .width_con ul.nav li a{font-size: 20px;}
+    
+    #visual.section_01 .width_con{left: 40px; margin: -40px 0 0 0;}
+    #visual.section_01 .width_con .title_con h2{font-size:50px;}
+    #visual.section_01 .width_con .title_con h3{font-size:16px;}
+    #visual.section_01 .width_con .title_con img{width: 30%; height: auto;}
+    
+    #brands.section_02 .width_con .two_con .text_box{font-size: 26px; margin:0 0 21px -58px; padding: 20px 0 20px 70px;}
+    #brands.section_02 .width_con .two_con img{width: 35%;}
+    #brands.section_02 .width_con .info{font-size:20px;}
+    #brands.section_02 .width_con .info .info_sub{font-size: 14px; margin-top: 20px;}
+    #brands.section_02 .width_con .mini_box{margin-top:20px;}
+    
+    #lookbook.section_04 .title_con{}
+    #lookbook.section_04 .lookbook_con img{}
+    #lookbook.section_04 .lookbook_con .iu_center img{}
+    
+    #time.section_05 .title_con h3{font-size: 30px;}
+    #time.section_05 .title_con h4{font-size: 20px;}
+    
+    #package.section_06 .three_con .box_con .hover_con{font-size: 20px;}
+    
+    #news.section_08 .width_con .title_con{display: block; text-align: center;  margin-bottom: 30px;}
+    #news.section_08 .width_con .title_con h4:before{left: 50%; margin-left: -25px;}
+    #news.section_08 .width_con .news_zone{display: block; margin: 0 auto;}
+    #news.section_08 .width_con .news_zone .inside .info h3{font-size: 18px; line-height: 1em;}
+    #news.section_08 .width_con .news_zone .inside .info p{ font-size: 12px; line-height: 1em;}
+}
+
+/*--------------------1240~1449//--------------------*/
+@media all and (min-width:1240px) and (max-width:1449px){
+    .width_con{width: 1200px;}
+    h2{font-size: 60px;}
+    
+    #visual.section_01 .width_con{margin-left: -600px;}
+    #visual.section_01 .width_con .title_con img{width: 30%; height: auto;}
+    #visual.section_01 .width_con .title_con h2{font-size:50px;}
+    #visual.section_01 .width_con .title_con h3{font-size:20px;}
+    
+    #brands.section_02 .width_con .two_con .text_box{font-size: 26px; margin:0 0 21px -58px; padding: 20px 0 20px 70px;}
+    #brands.section_02 .width_con .two_con img{width: 35%;}
+    #brands.section_02 .width_con .info{font-size:20px;}
+    #brands.section_02 .width_con .info .info_sub{font-size: 14px; margin-top: 20px;}
+    #brands.section_02 .width_con .mini_box{margin-top:20px;}
+    
+    #lookbook.section_04 .title_con{}
+    #lookbook.section_04 .lookbook_con img{}
+    #lookbook.section_04 .lookbook_con .iu_center img{}
+    
+    #time.section_05 .title_con h3{font-size: 30px;}
+    #time.section_05 .title_con h4{font-size: 20px;}
+    
+    #package.section_06 .three_con li .hover_con{}
+    
+    #news.section_08 .width_con .news_zone{max-width: 787px; margin-left: 58px;}
+    #news.section_08 .width_con .news_zone .inside .info h3{font-size: 18px;}
+    #news.section_08 .width_con .news_zone .inside .info p{line-height: 1.1em;}
+}
+
+@media all and (min-width:1450px){
+}

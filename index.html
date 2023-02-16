@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kangdaeng Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <h1 class="logo">
+            <a href="#" class="btn_home">
+              <img src="img/logo.png" alt="로고" />
+            </a>
+          </h1>
+          <nav class="mNav">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#skill">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="mb_btn">
+            <button class="menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+        <div class="navOn_cover"></div>
+      </header>
+
+      <section id="intro">
+        <div class="fixed_con">
+          <div class="inner">
+            <div class="title_con">
+              <h2 class="title">
+                <span id="intro_title1">WELCOME TO</span>
+                <span id="intro_title2">MY PORTFOLIO</span>
+              </h2>
+            </div>
+          </div>
+          <canvas id="star"></canvas>
+        </div>
+        <div class="space"></div>
+        <div class="scroll_down">
+          <div class="mouse">
+            <div class="scroller"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skip"></section>
+
+      <section id="about">
+        <div class="inner">
+          <div class="about_con">
+            <div class="left">
+              <div class="img_box">
+                <img src="img/mimo.png" />
+              </div>
+            </div>
+            <div class="right">
+              <h2>ABOUT</h2>
+              <h3>
+                안녕하세요
+                <br />
+                신입 웹 퍼블리셔 강국진 입니다.
+              </h3>
+              <p>
+                제가 작성한 코드가 웹으로 구현이 된다는 게 재밌는 일인 것 같습니다.
+                <br>
+                이쁘고 다양한 기능들을 구현해 보는 게 목표입니다.
+                <br>
+                그러다 보니 배움에는 끝이 없다고 명심하며 끊임없는 노력으로
+                <br>
+                계속 발전을 하여 저에 대한 미래를 투자해도
+                <br>
+                아깝지 않을 인재임을 증명해 보이겠습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="inner">
+          <h2>PORTFOLIO</h2>
+          <div class="slider_wrap">
+            <ul class="slider_con">
+              <li class="slide">
+                <div class="card_con">
+                  <div class="card">
+                    <div class="img_box">
+                      <img src="img/pf01.jpg" alt="PEPSI" />
+                    </div>
+                    <div class="text_con">
+                      <h4>Responsive Web</h4>
+                      <h3>PEPSI</h3>
+                      <div class="info">
+                        <p class="info_title">Tools</p>
+                        <p class="info_desc">
+                          Adobe Photoshop, HTML, CSS, Javascript(jQuery)
+                        </p>
+                        <p class="info_title">Scope</p>
+                        <p class="info_desc">
+                          Web Design, Front-end development
+                        </p>
+                      </div>
+                      <button class="pf_btn pepsi" type="button">
+                        <a href="./portfolio/pepsi" target="_blank">VIEW SITE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="slide">
+                <div class="card_con">
+                  <div class="card">
+                    <div class="img_box">
+                      <img src="img/pf02.jpg" alt="DUCATI" />
+                    </div>
+                    <div class="text_con">
+                      <h4>
+                        Promotion Site
+                        -
+                        <span>(1920*1080)</span>
+                      </h4>
+                      <h3>DUCATI</h3>
+                      <div class="info">
+                        <p class="info_title">Tools</p>
+                        <p class="info_desc">
+                          Adobe Photoshop, HTML, CSS, Javascript(jQuery)
+                        </p>
+                        <p class="info_title">Scope</p>
+                        <p class="info_desc">
+                          Web Design, Front-end development
+                        </p>
+                      </div>
+                      <button class="pf_btn ducati" type="button">
+                        <a href="./portfolio/ducati" target="_blank">VIEW SITE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="slide">
+                <div class="card_con">
+                  <div class="card">
+                    <div class="img_box">
+                      <img src="img/pf03.jpg" alt="PARADISE" />
+                    </div>
+                    <div class="text_con">
+                      <h4>
+                        Team Project
+                        -
+                        <span>Contribution : 30% (pc)</span>
+                      </h4>
+                      <h3>PARADISE CITE</h3>
+                      <div class="info">
+                        <p class="info_title">Tools</p>
+                        <p class="info_desc">
+                          Adobe Photoshop, HTML, CSS, Javascript(jQuery)
+                        </p>
+                        <p class="info_title">Scope</p>
+                        <p class="info_desc">
+                          Web Design, Front-end development
+                        </p>
+                      </div>
+                      <button class="pf_btn paradise" type="button">
+                        <a href="./portfolio/paradise" target="_blank">VIEW SITE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button id="prev" type="button">
+              <img src="img/slider_prev.png">
+            </button>
+            <button id="next" type="button">
+              <img src="img/slider_next.png">
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="skill"></section>
+
+      <footer id="contact"></footer>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    ></script>
+    <script type="text/javascript" src="js/common.js"></script>
+  </body>
+</html>

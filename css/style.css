@@ -445,9 +445,40 @@ h3 {
   right: 5px;
 }
 
-
 /*skill*/
-#skill {
+#skill .inner{
+  padding: 120px 0 50px;
+}
+#skill .inner .title_con{
+  margin-bottom: 10px;
+}
+#skill .inner .skill_con ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#skill .inner .skill_con ul li {
+  width: 22%;
+  padding: 40px 0;
+  margin: auto 0;
+}
+#skill .inner .skill_con ul li > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#skill .inner .skill_con ul li .skill_icon1 img{
+  height: 100%;
+  max-height: 100px;
+}
+#skill .inner .skill_con ul li .skill_icon2 img{
+  width: 100%;
+  max-width: 90px;
+}
+#skill .inner .skill_con ul li .skill_icon3 img{
+  width: 100%;
+  max-width: 80px;
 }
 
 /*contact*/
@@ -646,8 +677,11 @@ h3 {
     padding: 80px 0;
   }
 
-  h2 {
+  .title_con {
     margin-bottom: 30px;
+  }
+
+  h2 {
     font-size: 40px;
   }
   
@@ -801,12 +835,12 @@ h3 {
     margin-top: 50px;
     text-align: center;
   }
-  #about .inner .about_con .right h2 {
+  #about .inner .about_con .right .title_con {
     position: absolute;
     top: 50px;
     left: 50%;
-    margin-bottom: 0;
     transform: translateX(-50%);
+    margin-bottom: 0;
   }
   #about .inner .about_con .right h3 {
     font-size: 1.4rem;
@@ -881,6 +915,26 @@ h3 {
   #portfolio .inner .slider_wrap #prev img,
   #portfolio .inner .slider_wrap #next img {
     max-width: 40px;
+  }
+
+  /*skill*/
+  #skill .inner{
+    padding: 80px 0 30px;
+  }
+
+  #skill .inner .skill_con ul li{
+    width: 21%;
+    padding: 25px 0;
+  }
+
+  #skill .inner .skill_con ul li .skill_icon1 img{
+    height: 65px;
+  }
+  #skill .inner .skill_con ul li .skill_icon2 img{
+    width: 55px;
+  }
+  #skill .inner .skill_con ul li .skill_icon3 img{
+    width: 45px;
   }
 
   /*contact*/

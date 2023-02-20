@@ -99,14 +99,15 @@ section {
   margin: 0 auto;
   padding: 120px 0;
 }
+.title_con{
+  margin-bottom: 35px;
+  text-align: center;
+}
 
 h2 {
-  position: relative;
-  margin-bottom: 35px;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 700;
   font-family: 'ONE-Mobile-POP';
-  text-align: center;
 }
 
 h3 {
@@ -307,7 +308,7 @@ h3 {
 
 #about .inner .about_con .right {
 }
-#about .inner .about_con .right h2 {
+#about .inner .about_con .right .title_con {
   text-align: left;
 }
 #about .inner .about_con .right h3 {
@@ -408,20 +409,12 @@ h3 {
   width: 140px;
   height: 40px;
   border: 1px solid #222;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.2s;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn.pepsi:hover {
-  background: #015dcc;
-  border: 1px solid #015dcc;
-}
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn.ducati:hover {
-  background: #d00000;
-  border: 1px solid #d00000;
-}
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn.paradise:hover {
-  background: #665042;
-  border: 1px solid #665042;
+#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn:hover {
+  background: #8c75ef;
+  border: 1px solid #8c75ef;
 }
 #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn a {
   color: #222;
@@ -459,6 +452,56 @@ h3 {
 
 /*contact*/
 #contact {
+  position: relative;
+  background: #8c75ef;
+}
+#contact .inner {
+  padding: 50px 0;
+  font-family: "KyoboHandwriting2021sjy";
+}
+
+#contact .inner .title_con{
+  margin-bottom: 30px;
+}
+#contact .inner .title_con h2{
+  color: #fff;
+  font-size: 30px;
+}
+
+#contact .inner .info_con{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#contact .inner .info_con > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contact .inner .info_con .phone{
+  margin-right: 50px;
+}
+#contact .inner .info_con .email img{
+  margin-top: 5px;
+}
+#contact .inner .info_con div > img{
+  width: 100%;
+  max-width: 20px;
+  margin-bottom: 10px;
+}
+#contact .inner .info_con div > span{
+  color: #fff;
+  font-size: 20px;
+}
+
+#contact .inner .desc_con {
+  text-align: center;
+}
+#contact .inner .desc_con p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /*responsive*/
@@ -838,5 +881,28 @@ h3 {
   #portfolio .inner .slider_wrap #prev img,
   #portfolio .inner .slider_wrap #next img {
     max-width: 40px;
+  }
+
+  /*contact*/
+  #contact .inner {
+    padding: 25px 0;
+  }
+
+  #contact .inner .title_con h2 {
+    font-size: 24px;
+  }
+
+  #contact .inner .info_con .phone {
+    margin-right: 35px;
+  }
+  #contact .inner .info_con div > img {
+    max-width: 15px;
+  }
+  #contact .inner .info_con div > span {
+    font-size: 16px;
+  }
+
+  #contact .inner .desc_con p {
+    font-size: 12px;
   }
 }

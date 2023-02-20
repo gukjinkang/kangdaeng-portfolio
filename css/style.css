@@ -115,6 +115,25 @@ h3 {
   font-weight: 700;
 }
 
+/*loading*/
+body.loading{overflow: hidden;}
+body.loading .loader_con{opacity: 1;}
+body .loader_con{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0; pointer-events: none; z-index: 999999;}
+body .loader_con .loader{position: absolute; display: inline-block; *display: inline; *zoom: 1; top:50%; left:50%; transform: translate(-50%, -50%); color: #fff; font-size: 18px; box-sizing: border-box;}
+body .loader_con .loader:after{position: absolute; content: ''; width: 3px; height: 3px; background: currentColor; bottom: 2px; right: -5px; box-sizing: border-box; animation: loading 1s linear infinite;}
+@keyframes loading {
+  0% {
+    box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 10px 0 white, 20px 0 rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 10px 0 white, 20px 0 white;
+  }
+}
+
+
 /*#header*/
 #header {
   position: fixed;

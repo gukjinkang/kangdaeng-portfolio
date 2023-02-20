@@ -1,17 +1,3 @@
-/*load시 맨위로*/
-// $(window).on('load', function(){
-//     $("html, body").animate({scrollTop: 0},1);
-// });
-
-// /*--------------------loading--------------------*/
-// $(window).load(function(){
-//    setTimeout(function(){
-//        $(".loader_con").fadeOut(500,function(){
-//            $("body").removeClass("loading");
-//        });
-//    },1500);
-// });
-
 // $(function(){
 // /*--------------------top_btn--------------------*/
 //         if($(this).scrollTop() > 300){
@@ -43,14 +29,21 @@
 //         }
 //     });
 
-// /*--------------------nav ani--------------------*/
-//     $(document).on('click', 'a[href^="#"]', function (event) {
-//         event.preventDefault();
-//         $("html,body").stop().animate({
-//             scrollTop: $($.attr(this, 'href')).offset().top - 80
-//         }, 1000);
-//     });
 // });
+
+/* loading */
+$(window).load(function(){
+   setTimeout(function(){
+       $(".loader_con").fadeOut(500,function(){
+           $("body").removeClass("loading");
+       });
+   },2500);
+});
+
+/* load시 맨위로 */
+ $(window).on('load', function(){
+  $("html, body").animate({scrollTop: 0},1);
+});
 
 /* responsive */
 const toggleBtn = document.querySelector('.mb_btn .menu');
@@ -63,14 +56,23 @@ toggleBtn.addEventListener('click', () => {
   lock.classList.toggle('lock');
 });
 
-/* header blur */
+
 $(function() {
+  /* header blur */
   $(window).scroll(function() {
     if(300 < $(this).scrollTop()) {
       $("header").addClass("blur");
       } else {
         $("header").removeClass("blur");
       }
+  });
+
+  /* nav ani */
+  $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    $("html,body").stop().animate({
+      scrollTop: $($.attr(this, 'href')).offset().top - 50
+    }, 1000);
   });
 });
 
@@ -176,7 +178,7 @@ Star.prototype.draw = function() {
 var leftAni = document.getElementById('intro_title1'),
     rightAni = document.getElementById('intro_title2');
 
-;(function(){
+(function(){
 
   var throttle = function(type, name, obj){
     var obj = obj || window;

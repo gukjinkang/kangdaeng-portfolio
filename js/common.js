@@ -1,35 +1,7 @@
-// $(function(){
-// /*--------------------top_btn--------------------*/
-//         if($(this).scrollTop() > 300){
-//             $("a.t_btn").removeClass("hide");
-//         }else{
-//             $("a.t_btn").addClass("hide");
-//         }
-
-// /*--------------------section ani--------------------*/
-//         if($("#intro").height() / 2 > $(this).scrollTop()){
-
-//         }else{
-//             $("#about").removeClass("hide")
-//         }
-//         if($("#about").offset().top > $(this).scrollTop()){
-
-//         }else{
-//             $("#skill").removeClass("hide")
-//         }
-//         if($("#skill").offset().top > $(this).scrollTop()){
-
-//         }else{
-//             $("#portfolio").removeClass("hide")
-//         }
-//         if($("#portfolio").offset().top > $(this).scrollTop()){
-
-//         }else{
-//             $("#contact").removeClass("hide")
-//         }
-//     });
-
-// });
+/* 새로고침시 맨위로 */
+$(window).on('load', function(){
+  $("html, body").animate({scrollTop: 0},1);
+});
 
 /* loading */
 $(window).load(function(){
@@ -38,11 +10,6 @@ $(window).load(function(){
            $("body").removeClass("loading");
        });
    },2500);
-});
-
-/* load시 맨위로 */
- $(window).on('load', function(){
-  $("html, body").animate({scrollTop: 0},1);
 });
 
 /* responsive */
@@ -174,35 +141,6 @@ Star.prototype.draw = function() {
   context.restore();
 }
 
-/* intro title */
-var leftAni = document.getElementById('intro_title1'),
-    rightAni = document.getElementById('intro_title2');
-
-(function(){
-
-  var throttle = function(type, name, obj){
-    var obj = obj || window;
-    var running = false;
-    var func = function(){
-      if (running){ return; }
-      running = true;
-      requestAnimationFrame(function(){
-        obj.dispatchEvent(new CustomEvent(name));
-        running = false;
-      });
-    };
-    obj.addEventListener(type, func);
-  };
-
-  throttle("scroll", "optimizedScroll"); //optimizedScroll은 스크롤 작동을 하게
-})();
-
-window.addEventListener("optimizedScroll", function(){
-
-  leftAni.style.transform = "translate(" + window.pageYOffset + "%)";
-  rightAni.style.transform = "translate(-" + window.pageYOffset + "%)";
-})
-
 /* portfolio slider */
 // 변수지정
 var sliderWrap = document.getElementsByClassName('slider_wrap'),
@@ -270,3 +208,19 @@ slideNext.addEventListener('click', function(){
 });
 
 moveSlide(0);
+
+
+/* gsap */
+gsap.registerPlugin(ScrollTrigger);
+
+const introtitle = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#intro .title",
+    start: "top 25%",
+    end: "bottom top",
+    scrub: 1
+  }
+});
+introtitle.addLabel("a")
+  .to("#intro .intro_title1", { xPercent: 100 }, "a")
+  .to("#intro .intro_title2", { xPercent: -100 }, "a")

@@ -213,6 +213,7 @@ moveSlide(0);
 /* gsap */
 gsap.registerPlugin(ScrollTrigger);
 
+/* intro title */
 const introtitle = gsap.timeline({
   scrollTrigger: {
     trigger: "#intro .title",
@@ -221,6 +222,46 @@ const introtitle = gsap.timeline({
     scrub: 1
   }
 });
-introtitle.addLabel("a")
-  .to("#intro .intro_title1", { xPercent: 100 }, "a")
-  .to("#intro .intro_title2", { xPercent: -100 }, "a")
+introtitle.addLabel("x")
+  .to("#intro .intro_title1", { xPercent: 100 }, "x")
+  .to("#intro .intro_title2", { xPercent: -100 }, "x")
+
+/* about */
+gsap.from("#about .about_con", {
+  scrollTrigger: {
+    trigger: "#about .about_con",
+    toggleActions: "restart none none reverse",
+    start: "-200 75%"
+  },
+  y:150,
+  opacity: 0,
+  duration: 1
+})
+
+/* portfolio */
+const pfAni = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#portfolio .slider_wrap",
+    toggleActions: "restart none none reverse",
+    start: "top 75%"
+  }
+});
+pfAni.addLabel("pf")
+  .from("#portfolio .slider_wrap .card_con .card", {x: 50, opacity: 0, duration: 1}, "pf")
+  .from("#portfolio .slider_wrap .card_con .img_box", {x: -30, opacity:0, duration: 1},"pf")
+  .from("#portfolio .slider_wrap > button", {opacity: 0, duration: 0.5}, "-=0.2")
+  
+
+
+/* skill */
+gsap.from("#skill .skill_con ul li > div" , {
+  scrollTrigger: {
+    trigger: "#skill .title_con",
+    toggleActions: "restart none none reverse",
+    start: "top 75%",
+  },
+  y: 140,
+  opacity: 0, 
+  duration: 0.5, 
+  stagger: 0.2
+});

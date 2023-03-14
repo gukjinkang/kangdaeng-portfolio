@@ -337,36 +337,23 @@ body .loader_con .loader:after{position: absolute; content: ''; width: 3px; heig
 }
 
 /*portfolio*/
-#portfolio .inner {
-}
-
-#portfolio .inner .slider_wrap {
+#portfolio .inner .swiper-container {
   position: relative;
   width: calc(100% + 60px);
   margin: -13px -30px 0;
   overflow: hidden;
 }
-#portfolio .inner .slider_wrap .slider_con {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: left .3s ease-in;
-}
-
-#portfolio .inner .slider_wrap .slider_con .slide {
-  position: absolute;
-  width: 100%;
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide {
   padding: 20px 30px;
 }
 
-#portfolio .inner .slider_wrap .slider_con .slide .card_con {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con {
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card {
   width: 66%;
   padding: 40px 0;
   border-radius: 10px;
@@ -374,89 +361,89 @@ body .loader_con .loader:after{position: absolute; content: ''; width: 3px; heig
   box-shadow: 2px 2px 5px 2px rgb(0 0 0 / 15%)
 }
 
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .img_box {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .img_box {
   position: absolute;
   left: 0;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .img_box img {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .img_box img {
   width: 100%;
   max-width: 618px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 35%);
 }
 
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con {
   margin-left: 250px;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con h3 {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con h3 {
   position: relative;
   display: inline-block;
   margin: -10px 0 32px -3px;
   text-transform: uppercase;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con h4 {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con h4 {
   margin: -4px 0 22px -2px;
   font-size: 24px;
   font-weight: 400;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con h4 span {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con h4 span {
   vertical-align: middle;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info {
   font-family: "Roboto", sans-serif;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info_title {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info_title {
   margin-bottom: 14px;
   font-size: 24px;
   font-weight: 500;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info_desc {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info_desc {
   margin-bottom: 24px;
   font-size: 18px;
   font-weight: 400;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info_desc:last-child {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info_desc:last-child {
   margin-bottom: 37px;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .pf_btn {
   width: 140px;
   height: 40px;
   border: 1px solid #222;
   border-radius: 10px;
   transition: 0.2s;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn:hover {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .pf_btn:hover {
   background: #8c75ef;
   border: 1px solid #8c75ef;
 }
-#portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn a {
+#portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .pf_btn a {
   color: #222;
   font-size: 1rem;
   font-weight: 700;
 }
 
-#portfolio .inner .slider_wrap #prev,
-#portfolio .inner .slider_wrap #next{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 99;
+#portfolio .inner .swiper-container .swiper-button-prev,
+#portfolio .inner .swiper-container .swiper-button-next{
+  width: unset;
+  height: unset;
 }
-#portfolio .inner .slider_wrap #prev.disabled,
-#portfolio .inner .slider_wrap #next.disabled{
+
+#portfolio .inner .swiper-container .swiper-button-prev::after,
+#portfolio .inner .swiper-container .swiper-button-next::after{
   display: none;
 }
-#portfolio .inner .slider_wrap #prev img,
-#portfolio .inner .slider_wrap #next img{
+
+#portfolio .inner .swiper-container .swiper-button-prev img,
+#portfolio .inner .swiper-container .swiper-button-next img{
   width: 100%;
   max-width: 50px;
 }
-#portfolio .inner .slider_wrap #prev{
+#portfolio .inner .swiper-container .swiper-button-prev{
   left: 5px;
 }
-#portfolio .inner .slider_wrap #next{
+#portfolio .inner .swiper-container .swiper-button-next{
   right: 5px;
 }
 
@@ -678,14 +665,14 @@ body .loader_con .loader:after{position: absolute; content: ''; width: 3px; heig
   }
 
   /* portfolio */
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con{
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con{
     margin-left: 220px;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info_desc:last-child {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info_desc:last-child {
     margin-bottom: 37px;
   }
   
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .img_box img {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .img_box img {
     max-width: 520px;
   }
 }
@@ -731,41 +718,41 @@ body .loader_con .loader:after{position: absolute; content: ''; width: 3px; heig
   }
 
   /* portfolio */
-  #portfolio .inner .slider_wrap{
+  #portfolio .inner .swiper-container{
     margin: -16px -30px 0;
   }
   
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con {
     justify-content: center;
   }
 
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card {
     width: 650px;
     margin-top: 150px;
   }
 
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con {
     margin: 113px 0 0;
     text-align: center;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info_desc:last-child {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info_desc:last-child {
     margin-bottom: 37px;
   }
 
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .img_box {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .img_box {
     top: 0;
     width: 100%;
     text-align: center;
   }
 
-  #portfolio .inner .slider_wrap #prev,
-  #portfolio .inner .slider_wrap #next{
+  #portfolio .inner .swiper-container .swiper-button-prev,
+  #portfolio .inner .swiper-container .swiper-button-next{
     margin-top: 75px;
   }
-  #portfolio .inner .slider_wrap #prev{
+  #portfolio .inner .swiper-container .swiper-button-prev{
     left: 55px;
   }
-  #portfolio .inner .slider_wrap #next{
+  #portfolio .inner .swiper-container .swiper-button-next{
     right: 55px;
   }
 }
@@ -867,67 +854,67 @@ body .loader_con .loader:after{position: absolute; content: ''; width: 3px; heig
   }
 
   /* portfolio */
-  #portfolio .inner .slider_wrap{
+  #portfolio .inner .swiper-container{
     width: 100%;
     margin: -15px 0 0;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide{
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide{
     padding: 20px;
   }
 
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card {
     width: 85%;
     padding: 20px;
     margin-top: 70px;
   }
 
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con {
     margin: 71px 0 0;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con h3 {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con h3 {
     margin: -10px 0 30px;
     font-size: 28px;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con h4 {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con h4 {
     margin: -5px 0 22px;
     font-size: 1rem;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con h4 span{
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con h4 span{
     font-size: 0.8rem;
   }
 
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info_title {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info_title {
     margin-bottom: 11px;
     font-size: 1rem;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info_desc {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info_desc {
     margin-bottom: 14px;
     font-size: .8rem;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .info_desc:last-child {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .info_desc:last-child {
     margin-bottom: 27px;
   }
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .card .text_con .pf_btn {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .card .text_con .pf_btn {
     width: 125px;
     height: 35px;
   }
 
-  #portfolio .inner .slider_wrap .slider_con .slide .card_con .img_box img {
+  #portfolio .inner .swiper-container .swiper-wrapper .swiper-slide .card_con .img_box img {
     max-width: 247px;
   }
 
-  #portfolio .inner .slider_wrap #prev {
+  #portfolio .inner .swiper-container .swiper-button-prev {
     left: 6.5vw;
   }
-  #portfolio .inner .slider_wrap #next {
+  #portfolio .inner .swiper-container .swiper-button-next {
     right: 6.5vw;
   }
-  #portfolio .inner .slider_wrap #prev, 
-  #portfolio .inner .slider_wrap #next {
+  #portfolio .inner .swiper-container .swiper-button-prev, 
+  #portfolio .inner .swiper-container .swiper-button-next {
     margin-top: 36px;
   }
-  #portfolio .inner .slider_wrap #prev img,
-  #portfolio .inner .slider_wrap #next img {
+  #portfolio .inner .swiper-container .swiper-button-prev img,
+  #portfolio .inner .swiper-container .swiper-button-next img {
     max-width: 40px;
   }
 

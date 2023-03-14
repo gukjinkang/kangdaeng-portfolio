@@ -141,74 +141,13 @@ Star.prototype.draw = function() {
   context.restore();
 }
 
-/* portfolio slider */
-// 변수지정
-var sliderWrap = document.getElementsByClassName('slider_wrap'),
-    sliderCon = document.getElementsByClassName('slider_con'),
-    slides = document.getElementsByClassName('slide'),
-    slideCount = slides.length, //슬라이드의 개수
-    currentIndex = 0,
-    topHeight = 0,
-    slidePrev = document.getElementById('prev'),
-    slideNext = document.getElementById('next');
-
-
-// 슬라이드 높이 지정
-window.onresize = () => {
-  calculateTallestSlide();
-}
-
-function calculateTallestSlide(){ 
-  topHeight = 0
-  for(var i=0; i<slideCount; i++){
-    if(slides[i].offsetHeight > topHeight){
-      topHeight = slides[i].offsetHeight;
-    } 
-  }
-
-  sliderWrap[0].style.height = topHeight + 'px';
-}    
-
-calculateTallestSlide();    
-
-// 슬라이드 가로 배열
-  for(var i=0; i<slideCount; i++){
-    slides[i].style.left = i*100 + '%';
-  }
-
-// 슬라이드 이동 함수
-function moveSlide(idx){
-  sliderCon[0].style.left = idx * -100 + '%';
-  currentIndex = idx;
-
-  updateSlide();
-}
-
-function updateSlide(){
-  if(currentIndex == 0){
-      slidePrev.classList.add('disabled');
-  } else{
-      slidePrev.classList.remove('disabled');
-  }
-
-  if(currentIndex == slideCount -1){
-      slideNext.classList.add('disabled');
-  } else{
-      slideNext.classList.remove('disabled');
-  }
-}
-
-//슬라이드 버튼 기능
-slidePrev.addEventListener('click', function(){
-  moveSlide(currentIndex - 1);
+/* portfolio swiper */
+var swiper = new Swiper(".swiper-container", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
-
-slideNext.addEventListener('click', function(){
-  moveSlide(currentIndex +  1);
-});
-
-moveSlide(0);
-
 
 /* gsap */
 gsap.registerPlugin(ScrollTrigger);
@@ -231,27 +170,26 @@ gsap.from("#about .about_con", {
   scrollTrigger: {
     trigger: "#about .about_con",
     toggleActions: "restart none none reverse",
-    start: "-200 75%"
+    start: "-200 70%"
   },
   y:150,
   opacity: 0,
-  duration: 1
+  scale: .7,
+  duration: .5
 })
 
 /* portfolio */
 const pfAni = gsap.timeline({
   scrollTrigger: {
-    trigger: "#portfolio .slider_wrap",
+    trigger: "#portfolio .swiper-container",
     toggleActions: "restart none none reverse",
     start: "top 75%"
   }
 });
 pfAni.addLabel("pf")
-  .from("#portfolio .slider_wrap .card_con .card", {x: 50, opacity: 0, duration: 1}, "pf")
-  .from("#portfolio .slider_wrap .card_con .img_box", {x: -30, opacity:0, duration: 1},"pf")
-  .from("#portfolio .slider_wrap > button", {opacity: 0, duration: 0.5}, "-=0.2")
-  
-
+  .from("#portfolio .swiper-container .card_con .card", {x: 50, opacity: 0, duration: 1}, "pf")
+  .from("#portfolio .swiper-container .card_con .img_box", {x: -30, opacity:0, duration: 1},"pf")
+  .from("#portfolio .swiper-container button > img", {opacity: 0, duration: .5}, "-=.2")
 
 /* skill */
 gsap.from("#skill .skill_con ul li > div" , {
@@ -262,6 +200,6 @@ gsap.from("#skill .skill_con ul li > div" , {
   },
   y: 140,
   opacity: 0, 
-  duration: 0.5, 
+  duration: .5, 
   stagger: 0.2
 });
